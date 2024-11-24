@@ -1,0 +1,26 @@
+branch_whitelist = ["main", "release/**"]
+disable_bump_commit = false
+disable_changelog = false
+from_latest_tag = false
+generate_mono_repository_global_tag = true
+ignore_merge_commits = false
+skip_ci = "[skip ci]"
+skip_untracked = true
+tag_prefix = "v"
+
+pre_bump_hooks = []
+post_bump_hooks = []
+pre_package_bump_hooks = []
+post_package_bump_hooks = []
+
+[git_hooks]
+
+[commit_types]
+
+[changelog]
+authors = [{ signature = "Alexander Bauer", username = "alexander-bauer" }]
+path = "CHANGELOG.md"
+
+[bump_profiles]
+
+[packages]
