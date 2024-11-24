@@ -1,0 +1,18 @@
+---
+- id: cocogitto-check
+  name: cocogitto check
+  description: check messages of all ancestor commits
+  stages: [pre-commit, pre-push] # check before allowing commits or pushes
+  language: system
+  entry: 'cog check'
+  pass_filenames: false # no need to pass changed files
+
+# On only the commit-msg stage, verify just the commit message
+- id: cocogitto-verify
+  name: cocogitto verify
+  description: verify a newly written commit message
+  stages: [commit-msg]
+  language: system
+  # hooks in the commit-msg stage are passed one argument, which the path to a
+  # file containing the commit message
+  entry: cog verify --file
