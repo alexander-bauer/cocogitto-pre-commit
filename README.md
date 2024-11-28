@@ -30,6 +30,8 @@ Check the validity of all ancestor commit messages using `cog check`.
 
 - Override the stages it runs on by supplying `stages: [pre-commit, pre-push]`.
   (These are stages it runs on by default.)
+- To check only commits since a specific ref, supply arguments to the command
+  like `args: ["5f59c71ba83e44c8a8044d2c39abf3e919d200ae..HEAD"]`.
 
 ### `cocogitto-verify`
 
